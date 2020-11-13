@@ -1,0 +1,144 @@
+@font-face
+  font-family: 'Alata'
+  font-style: normal
+  font-weight: 400
+  src: local('Alata Regular'), local('Alata-Regular'), url('../fonts/alata-v2-latin-regular.woff2') format('woff2'), url('../fonts/alata-v2-latin-regular.woff') format('woff')
+
+
+@font-face
+  font-family: 'Scada'
+  font-style: normal
+  font-weight: 400
+  src: local('Scada Regular'), local('Scada-Regular'), url('../fonts/scada-v9-latin_cyrillic-regular.woff2') format('woff2'), url('../fonts/scada-v9-latin_cyrillic-regular.woff') format('woff')
+
+@font-face
+  font-family: 'Scada Bold'
+  font-style: normal
+  font-weight: 700
+  src: local('Scada Bold'), local('Scada-Bold'), url('../fonts/scada-v9-latin_cyrillic-700.woff2') format('woff2'), url('../fonts/scada-v9-latin_cyrillic-700.woff') format('woff')
+
+
+@font-face
+  font-family: 'Goldman'
+  font-style: normal
+  font-weight: 400
+  src: local('Goldman Regular'), local('Goldman-Regular'), url('../fonts/goldman-v1-latin-regular.woff2') format('woff2'), url('../fonts/goldman-v1-latin-regular.woff') format('woff')
+
+@font-face
+  font-family: 'Goldman Bold'
+  font-style: normal
+  font-weight: 700
+  src: local('Goldman Bold'), local('Goldman-Bold'), url('../fonts/goldman-v1-latin-700.woff2') format('woff2'), url('../fonts/goldman-v1-latin-700.woff') format('woff')
+
+
+body
+  height: 100vh
+
+.appWrapper
+
+  height: 100vh
+  display: grid
+  justify-content: center
+  position: relative
+  grid-template-rows: 30px 1fr
+  background: url("https://rsl56.reactlearning.ru/img/appbckg1.png") no-repeat center center fixed, rgba(255, 255, 255, 0.6)
+  background-blend-mode: color
+  -moz-background-size: 100%
+  -webkit-background-size: 100%
+  -o-background-size: 100%
+  background-size: 100%
+
+  .navbarWrapper
+    margin-top: 40px
+    display: flex
+    height: 100px
+    justify-content: space-between
+    align-items: center
+    background-color: white
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1)
+    width: 1500px
+
+    .logo
+      display: flex
+      align-items: center
+      justify-content: center
+
+      width: 380px
+      height: 100%
+      background-color: #DA251D
+
+      img
+        width: 60px
+        height: auto
+
+      .logoText
+        display: flex
+        flex-direction: column
+        align-items: center
+        font-family: "Scada Bold", "sans-serif"
+        margin-left: 20px
+
+        p
+          text-transform: uppercase
+          font-size: 30px
+          color: white
+          letter-spacing: 3px
+
+        span
+          font-size: 11px
+          letter-spacing: -0.5px
+          color: black
+
+
+    .navbarMenu
+      color: #333
+
+      ul
+        display: flex
+        flex-direction: row
+
+        li
+          padding-right: 20px
+          text-transform: uppercase
+          font-family: "Scada"
+          transition: 0.2s ease
+          cursor: pointer
+
+          &:last-child
+            padding-right: 0
+
+          &:hover
+            text-shadow: 0 0 .85px
+            transition: 0.2s ease-in
+
+
+    .navbarContacts
+      display: flex
+      flex-direction: row
+      align-items: flex-end
+      padding-right: 30px
+
+      a
+        color: #000000
+        text-decoration: none
+        font-family: "Scada Bold"
+        outline: none
+        transition: 0.3s ease
+
+        &:hover
+          color: #DA251D
+          transition: 0.3s ease
+
+
+      &:first-child
+        font-size: 20px
+
+
+      &:last-child
+        font-size: 24px
+
+        span
+          font-family: "Alata", "sans-serif"
+          padding-left: 10px
+          font-weight: 700
+
