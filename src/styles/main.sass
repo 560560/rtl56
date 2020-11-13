@@ -4,7 +4,6 @@
   font-weight: 400
   src: local('Alata Regular'), local('Alata-Regular'), url('../fonts/alata-v2-latin-regular.woff2') format('woff2'), url('../fonts/alata-v2-latin-regular.woff') format('woff')
 
-
 @font-face
   font-family: 'Scada'
   font-style: normal
@@ -16,7 +15,6 @@
   font-style: normal
   font-weight: 700
   src: local('Scada Bold'), local('Scada-Bold'), url('../fonts/scada-v9-latin_cyrillic-700.woff2') format('woff2'), url('../fonts/scada-v9-latin_cyrillic-700.woff') format('woff')
-
 
 @font-face
   font-family: 'Goldman'
@@ -30,18 +28,104 @@
   font-weight: 700
   src: local('Goldman Bold'), local('Goldman-Bold'), url('../fonts/goldman-v1-latin-700.woff2') format('woff2'), url('../fonts/goldman-v1-latin-700.woff') format('woff')
 
+@font-face
+  font-family: 'Raleway'
+  font-style: normal
+  font-weight: 400
+  src: url('../fonts/raleway-v18-latin_cyrillic-regular.woff2') format('woff2'), url('../fonts/raleway-v18-latin_cyrillic-regular.woff') format('woff')
+
+@font-face
+  font-family: 'Raleway'
+  font-style: normal
+  font-weight: 600
+  src: url('../fonts/raleway-v18-latin_cyrillic-600.woff2') format('woff2'), url('../fonts/raleway-v18-latin_cyrillic-600.woff') format('woff')
+
+@font-face
+  font-family: 'Raleway'
+  font-style: normal
+  font-weight: 500
+  src: url('../fonts/raleway-v18-latin_cyrillic-500.woff2') format('woff2'), url('../fonts/raleway-v18-latin_cyrillic-500.woff') format('woff')
+
+@font-face
+  font-family: 'Raleway'
+  font-style: normal
+  font-weight: 700
+  src: url('../fonts/raleway-v18-latin_cyrillic-700.woff2') format('woff2'), url('../fonts/raleway-v18-latin_cyrillic-700.woff') format('woff')
+
+
+html
+  box-sizing: border-box
+
+
+*, *::before, *::after
+  box-sizing: inherit
+
+
 
 body
   height: 100vh
 
-.appWrapper
+.container
+  margin: 0 100px
 
+.emailFormWrapper
+  display: flex
+  width: 340px
+  height: 300px
+  background-color: rgba(0, 0, 0, 0.53)
+  border: 1px solid rgba(218, 37, 29, 0.41)
+  padding: 20px
+  .inputField
+    padding: 0 0 0 15px
+    border: 1px solid rgba(218, 37, 29, 0.41)
+    width: 100%
+    height: 50px
+    margin-bottom: 15px
+    font-size: 14px
+  .button
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 45px
+    background-color: #DA251D
+    cursor: pointer
+    transition: 0.2s ease
+    &:hover
+      transition: 0.2s ease
+      background-color: #a01b14
+    &:active
+      background-color: #fc2b22
+    h4
+      font-size: 18px
+      font-family: "Scada Bold", "sans-serif"
+      color: white
+
+  .infoText
+    display: flex
+
+
+    p
+      margin-top: 10px
+      text-align: justify
+      font-size: 13px
+      line-height: 1.4
+      font-family: "Raleway", "sans-serif"
+      color: rgba(255, 255, 255, 0.88)
+
+
+
+
+
+.appWrapper
   height: 100vh
   display: grid
   justify-content: center
-  position: relative
-  grid-template-rows: 30px 1fr
-  background: url("https://rsl56.reactlearning.ru/img/appbckg1.png") no-repeat center center fixed, rgba(255, 255, 255, 0.6)
+  grid-template-columns: 1700px
+  grid-template-rows: 140px 1fr 100px
+  grid-row-gap: 50px
+  row-gap: 30px
+  padding: 0 50px
   background-blend-mode: color
   -moz-background-size: 100%
   -webkit-background-size: 100%
@@ -49,14 +133,16 @@ body
   background-size: 100%
 
   .navbarWrapper
+    position: relative
+    z-index: 15
     margin-top: 40px
     display: flex
     height: 100px
     justify-content: space-between
     align-items: center
-    background-color: white
-    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1)
-    width: 1500px
+    background-color: rgba(255, 255, 255, 0.84)
+    //box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1)
+
 
     .logo
       display: flex
@@ -83,6 +169,7 @@ body
           font-size: 30px
           color: white
           letter-spacing: 3px
+          border-bottom: 2px solid black
 
         span
           font-size: 11px
@@ -91,25 +178,29 @@ body
 
 
     .navbarMenu
-      color: #333
 
       ul
         display: flex
         flex-direction: row
 
         li
-          padding-right: 20px
-          text-transform: uppercase
-          font-family: "Scada"
-          transition: 0.2s ease
-          cursor: pointer
+          a
+            text-decoration: none
+            outline: none
+            padding: 20px 15px
+            text-transform: uppercase
+            font-family: "Scada"
+            font-size: 17px
+            transition: 0.20s ease-in
+            cursor: pointer
+            color: #333
+            letter-spacing: -0.5px
 
-          &:last-child
-            padding-right: 0
 
           &:hover
-            text-shadow: 0 0 .85px
-            transition: 0.2s ease-in
+            a
+              transition: 0.20s ease-in
+              color: #DA251D
 
 
     .navbarContacts
@@ -124,21 +215,227 @@ body
         font-family: "Scada Bold"
         outline: none
         transition: 0.3s ease
+        font-size: 20px
 
         &:hover
           color: #DA251D
           transition: 0.3s ease
 
-
-      &:first-child
-        font-size: 20px
-
-
-      &:last-child
-        font-size: 24px
-
         span
           font-family: "Alata", "sans-serif"
           padding-left: 10px
           font-weight: 700
+
+  .homeWrapper
+    display: flex
+    flex-direction: column
+    height: 100%
+    position: relative
+
+
+    .background
+      z-index: 5
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, .73)
+
+
+      img
+
+        z-index: 1
+        width: 100%
+        height: auto
+
+
+      &:after
+        background: rgba(0, 0, 0, .7)
+        z-index: 2
+        content: ''
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+    .headerContent
+      z-index: 15
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-column-gap: 50px
+      cursor: context-menu
+
+      .leftSide
+        display: flex
+        flex-direction: column
+
+        .header
+          padding-top: 50px
+          display: flex
+
+          h1
+            font-size: 50px
+            font-family: "Raleway", "sans-serif"
+            font-weight: 600
+            color: rgba(255, 255, 255, 0.84)
+            border-bottom: 5px solid #DA251D
+
+        .headerText
+          padding-top: 40px
+          max-width: 600px
+
+          h2
+            font-size: 32px
+            font-family: "Raleway", "sans-serif"
+
+            color: rgba(255, 255, 255, 0.84)
+
+        .headerIcons
+          padding-top: 40px
+          display: flex
+          flex-direction: column
+
+          .iconItemWrapper
+
+            padding: 10px 0
+
+            .iconItem
+              display: inline-flex
+              align-items: center
+
+
+              b
+                font-family: "Alata", "sans-serif"
+
+              span
+                &:first-child
+                  color: white
+                  font-size: 50px
+                  padding-right: 20px
+                  transition: 0.20s ease-in
+
+                &:last-child
+                  outline: none
+                  text-decoration: none
+                  color: rgba(255, 255, 255, 0.84)
+                  font-size: 25px
+                  font-family: "Raleway", "sans-serif"
+                  font-weight: 600
+                  border-bottom: 2px solid rgba(218, 37, 29, 0)
+                  transition: 0.20s ease-in
+
+              &:hover
+                span
+                  &:first-child
+                    color: #DA251D
+                    transition: 0.20s ease-in
+
+                  &:last-child
+
+                    border-bottom: 2px solid #DA251D
+                    transition: 0.20s ease-in
+
+      .rightSide
+        display: flex
+        justify-content: center
+        align-items: center
+
+  .footerWrapper
+    position: relative
+    z-index: 15
+    background-color: rgba(0, 0, 0, 0.53)
+    height: 100%
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+    .phone
+      display: flex
+      flex-direction: column
+      align-items: center
+      opacity: 0.5
+      transition: 0.2s ease-in
+
+      .icon
+        margin-bottom: 10px
+
+        a
+          text-decoration: none
+          font-family: "Scada Bold"
+          outline: none
+          color: rgba(255, 255, 255, 0.84)
+          font-size: 40px
+
+      .text
+        a
+          text-decoration: none
+          font-family: "Scada Bold"
+          outline: none
+          color: rgba(255, 255, 255, 0.84)
+          font-size: 16px
+      &:hover
+        opacity: 1
+        transition: 0.2s ease-in
+
+
+
+    .email
+      display: flex
+      flex-direction: column
+      align-items: center
+      opacity: 0.5
+      transition: 0.2s ease-in
+
+      .icon
+        margin-bottom: 10px
+
+        a
+          text-decoration: none
+          font-family: "Scada Bold"
+          outline: none
+          color: rgba(255, 255, 255, 0.84)
+          font-size: 40px
+
+      .text
+        a
+          text-decoration: none
+          font-family: "Scada Bold"
+          outline: none
+          color: rgba(255, 255, 255, 0.84)
+          font-size: 16px
+      &:hover
+        opacity: 1
+        transition: 0.2s ease-in
+
+    .findUs
+      display: flex
+      flex-direction: column
+      align-items: center
+      opacity: 0.5
+      transition: 0.2s ease-in
+
+      .icon
+        margin-bottom: 10px
+
+        a
+          text-decoration: none
+          font-family: "Scada Bold"
+          outline: none
+          color: rgba(255, 255, 255, 0.84)
+          font-size: 40px
+
+      .text
+        a
+          text-decoration: none
+          font-family: "Scada Bold"
+          outline: none
+          color: rgba(255, 255, 255, 0.84)
+          font-size: 16px
+      &:hover
+        opacity: 1
+        transition: 0.2s ease-in
+
+
 
