@@ -37,7 +37,7 @@ const Home = (props) => {
                 </div>
 
                 <div className="rightSide">
-                    <EmailForm/>
+                    <EmailForm sitePage="Главная"/>
 
                 </div>
 
