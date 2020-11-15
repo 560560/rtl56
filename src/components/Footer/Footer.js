@@ -2,14 +2,15 @@ import React from 'react';
 import {IoIosCall} from "react-icons/io";
 import {FiMail} from "react-icons/fi";
 import {ImLocation} from "react-icons/im";
+import {NavLink} from "react-router-dom";
 
 const Footer = (props) => {
     return (
         <div className="container">
             <div className="footerWrapper">
                 <div className="findUs">
-                    <div className="icon"><a href="#"><ImLocation/></a></div>
-                    <div className="text"><a href="#"><span>г.Оренбург</span></a></div>
+                    <div className="icon"><NavLink to="/contacts"><ImLocation/></NavLink></div>
+                    <div className="text"><NavLink to="/contacts"><span>Наш адрес</span></NavLink></div>
                 </div>
                 <div className="email">
                     <div className="icon"><a href="mailto:mail@example.com"><FiMail/></a></div>

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from "../../assets/images/logo.png"
 import {NavLink} from "react-router-dom";
 
 const Navbar = (props) => {
+    const [activeBurger, setActiveBurger] = useState(false)
     return (
         <div className="container">
             <div className="navbarWrapper">
@@ -14,9 +15,9 @@ const Navbar = (props) => {
                         <span>реновация основных средств и технологий лизинга</span>
                     </div>
                 </div>
-                <div className="navbarMenu">
+                <div className={`navbarMenu${activeBurger ? " active" : ""}`}>
                     <ul>
-                        <li><NavLink to="/">Главная</NavLink></li>
+                        <li><NavLink to="/home">Главная</NavLink></li>
                         <li><NavLink to="/leasing">Услуги лизинга</NavLink></li>
                         <li><NavLink to="/docs">Документы</NavLink></li>
                         <li><NavLink to="/faq">Вопрос-ответ</NavLink></li>
@@ -27,6 +28,9 @@ const Navbar = (props) => {
                 <div className="navbarContacts">
                     <a href="tel:+73532270787"><span>8 (3532) 27-07-87</span></a>
 
+                </div>
+                <div className={`burgerMenu${activeBurger ? " active" : ""}`} onClick={()=> {setActiveBurger(!activeBurger)}}>
+                    <span></span>
                 </div>
             </div>
         </div>
