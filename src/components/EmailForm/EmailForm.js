@@ -12,9 +12,10 @@ const EmailForm = ({sitePage}) => {
     })
     const [validationRequired, setValidationRequired] = useState(false);
     const [emailSended, setEmailSended] = useState(false);
+    const [isFetching, setIsFetching] = useState(false)
 
     const getDataFromForm = async (formData) => {
-
+        setIsFetching(true)
         let data = {
             "service_id": 'gmail',
             "template_id": 'RTL56',
@@ -30,6 +31,7 @@ const EmailForm = ({sitePage}) => {
         let response = await instance.post("send", data)
         if (response.status === 200) {
             setEmailSended(true)
+            setIsFetching(false)
         }
     }
 
@@ -90,7 +92,7 @@ const EmailForm = ({sitePage}) => {
                                        id="name"
                                        name="name"
                                        placeholder="Ваше имя*"
-                                       className={`inputField ${errors.name ? "error" : ""}`}
+                                       className={`inputField${errors.name ? " error" : ""}`}
                                        value={values.name}
                                        onChange={handleChange}
 
@@ -101,7 +103,7 @@ const EmailForm = ({sitePage}) => {
                                        id="phone"
                                        name="phone"
                                        placeholder="Телефон*"
-                                       className={`inputField ${errors.phone ? "error" : ""}`}
+                                       className={`inputField${errors.phone ? " error" : ""}`}
                                        value={values.phone}
                                        onChange={handleChange}
 
@@ -109,7 +111,7 @@ const EmailForm = ({sitePage}) => {
                                 {errors.phone && <div className="errorMessage">{errors.phone}</div>}
 
                                 <div className="button">
-                                    <button type="submit" onClick={() => setValidationRequired(true)}><h4>Оставить заявку</h4></button>
+                                    <button type="submit" disabled={isFetching} onClick={() => setValidationRequired(true)}><h4>Оставить заявку</h4></button>
                                 </div>
                                 <div className="infoText">
                                     <p>Наш специалист перезвонит Вам в ближайшее время для предоставления предварительного решения. Оставляя заявку, Вы даёте

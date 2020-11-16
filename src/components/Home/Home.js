@@ -1,17 +1,35 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import bgHome from "../../assets/images/bcgHome.jpg"
 import {GoCalendar} from "react-icons/go";
 import {GiPayMoney, GiTwoCoins} from "react-icons/gi";
 import {BsClockHistory} from "react-icons/bs";
 import EmailForm from "../EmailForm/EmailForm";
 
+const horizontalTest = () => {
+    if (window.innerWidth >= window.innerHeight) {
+        document.querySelector("#background").classList.add("horizontal")
+        document.querySelector("#headerContent").classList.add("horizontal")
+
+    } else {
+        document.querySelector("#background").classList.remove("horizontal")
+        document.querySelector("#headerContent").classList.remove("horizontal")
+    }
+}
+
 const Home = (props) => {
+    useEffect(() => {
+        horizontalTest()
+    }, [])
+
+    window.addEventListener("resize", function () {
+        horizontalTest()
+    }, false);
     return (
         <div className="homeWrapper">
-            <div className="background">
+            <div className="background" id="background">
                 <img src={bgHome} alt="Лизинг для юридических лиц и ИП" title="Лизинг для юридических лиц и ИП"/>
-            </div>
-            <div className="headerContent">
+            </div>"
+            <div className="headerContent" id="headerContent">
                 <div className="leftSide">
                     <div className="header">
                         <h1>Лизинг для бизнеса</h1>
