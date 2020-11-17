@@ -60,9 +60,14 @@ html
 *, *::before, *::after
   box-sizing: inherit
 
+html
+  height: 100vh
 
 body
   height: 100vh
+
+  &.lock
+    overflow: hidden
 
 .container
   margin: 0 100px
@@ -179,8 +184,7 @@ body
   justify-content: center
   grid-template-columns: 1700px
   grid-template-rows: 140px 1fr 100px
-  grid-row-gap: 50px
-  row-gap: 30px
+  grid-row-gap: 30px
   padding: 0 50px
   background-blend-mode: color
   -moz-background-size: 100%
@@ -234,8 +238,8 @@ body
 
 
     .navbarMenu
-
       ul
+
         display: flex
         flex-direction: row
 
@@ -413,7 +417,7 @@ body
 
         a
           text-decoration: none
-          font-family: "Scada Bold"
+          font-family: "Scada Bold", "sans-serif"
           outline: none
           color: rgba(255, 255, 255, 0.84)
           font-size: 40px
@@ -421,7 +425,7 @@ body
       .text
         a
           text-decoration: none
-          font-family: "Scada Bold"
+          font-family: "Scada Bold", "sans-serif"
           outline: none
           color: rgba(255, 255, 255, 0.84)
           font-size: 16px
@@ -443,7 +447,7 @@ body
 
         a
           text-decoration: none
-          font-family: "Scada Bold"
+          font-family: "Scada Bold", "sans-serif"
           outline: none
           color: rgba(255, 255, 255, 0.84)
           font-size: 40px
@@ -451,7 +455,7 @@ body
       .text
         a
           text-decoration: none
-          font-family: "Scada Bold"
+          font-family: "Scada Bold", "sans-serif"
           outline: none
           color: rgba(255, 255, 255, 0.84)
           font-size: 16px
@@ -472,7 +476,7 @@ body
 
         a
           text-decoration: none
-          font-family: "Scada Bold"
+          font-family: "Scada Bold", "sans-serif"
           outline: none
           color: rgba(255, 255, 255, 0.84)
           font-size: 40px
@@ -480,7 +484,7 @@ body
       .text
         a
           text-decoration: none
-          font-family: "Scada Bold"
+          font-family: "Scada Bold", "sans-serif"
           outline: none
           color: rgba(255, 255, 255, 0.84)
           font-size: 16px
@@ -490,9 +494,160 @@ body
         transition: 0.2s ease-in
 
 
+@media (max-width: 1440px)
+  .appWrapper
+    grid-template-columns: 100%
+    padding: 0
+
+    .container
+      margin: 0 50px
+
+      .navbarWrapper
+        .navbarMenu
+          ul
+            li
+              a
+                font-size: 16px
+                padding: 20px 12px
+
+      .homeWrapper
+        .background
+          img
+            height: 100%
+            width: auto
+
+
+@media (max-width: 1366px)
+  .appWrapper
+    grid-template-columns: 100%
+    grid-template-rows: 80px 1fr 100px
+    padding: 0
+
+    .container
+      margin: 0
+
+      .navbarWrapper
+        height: 100%
+        margin-top: 0
+
+        .logo
+          width: 295px
+
+          img
+            width: 45px
+
+          .logoText
+            p
+              font-size: 24px
+
+            span
+              font-size: 9px
+
+        .navbarMenu
+          ul
+            li
+              a
+                font-size: 16px
+                padding: 20px 10px
+
+        .navbarContacts
+          padding-right: 14px
+
+          a
+            font-size: 20px
+
+      .homeWrapper
+        padding: 0 30px
+
+        .background
+          img
+            width: auto
+            height: 100%
+
+        .headerContent
+          .leftSide
+            .header
+              padding-top: 15px
+
+              h1
+                font-size: 56px
+
+            .headerText
+              h2
+                font-size: 25px
+
+            .headerIcons
+              .iconItemWrapper
+                padding: 8px 0
+
+
+@media (max-width: 1200px)
+  .appWrapper
+    grid-template-columns: 100%
+    grid-template-rows: 80px 1fr 100px
+    padding: 0
+
+    .container
+      margin: 0
+
+      .navbarWrapper
+        height: 100%
+        margin-top: 0
+
+        .logo
+          width: 295px
+
+          img
+            width: 45px
+
+          .logoText
+            p
+              font-size: 24px
+
+            span
+              font-size: 9px
+
+        .navbarMenu
+          ul
+            li
+              a
+                font-size: 14px
+                padding: 20px 10px
+
+        .navbarContacts
+          padding-right: 14px
+
+          a
+            font-size: 14px
+
+      .homeWrapper
+        padding: 0 30px
+
+        .background
+          img
+            width: auto
+            height: 100%
+
+        .headerContent
+          .leftSide
+            .header
+              padding-top: 15px
+
+              h1
+                font-size: 45px
+
+            .headerText
+              h2
+                font-size: 25px
+
+          .rightSide
+            justify-content: flex-end
+
+
 @media (max-width: 1024px)
   .appWrapper
     grid-template-columns: 100vw
+    grid-template-rows: 90px 1fr 100px
 
     .container
       margin: 0
@@ -500,13 +655,29 @@ body
       .navbarWrapper
         margin-top: 0
         background-color: #da251d
+        height: 100%
+        margin-bottom: 20px
+
+        .logo
+          width: 380px
+
+          img
+            width: 60px
+
+          .logoText
+            p
+              font-size: 30px
+
+            span
+              font-size: 11px
 
         .navbarMenu
+          padding-bottom: 90px
           z-index: 15
           background-color: rgba(255, 255, 255, 1)
           position: fixed
           left: 100%
-          top: 100px
+          top: 90px
           width: 100%
           height: 100%
           transition: all 0.3s ease
@@ -523,6 +694,8 @@ body
 
         .navbarContacts
           a
+            font-size: 20px
+
             span
               color: white
 
@@ -616,6 +789,8 @@ body
                   font-size: 27px
 
               .headerIcons
+                margin-bottom: 0
+
                 .iconItemWrapper
                   padding: 7px 0
 
@@ -626,6 +801,24 @@ body
 
                       &:last-child
                         font-size: 22px
+
+            .rightSide
+              .emailFormWrapper
+                .requestForm
+                  display: flex
+                  width: 340px
+                  min-height: 300px
+                  background-color: rgba(0, 0, 0, 0.53)
+                  border: 1px solid rgba(218, 37, 29, 0.41)
+                  padding: 20px
+
+                  .inputField
+                    height: 50px
+                    margin-bottom: 17px
+
+                  .button
+                    button
+                      height: 45px
 
           .leftSide
             .header
@@ -641,46 +834,50 @@ body
                 font-size: 35px
 
             .headerIcons
+              margin-bottom: 30px
+
               .iconItemWrapper
                 padding: 7px 0
 
                 .iconItem
                   span
                     &:first-child
-                      font-size: 45px
+                      font-size: 70px
 
                     &:last-child
-                      font-size: 22px
+                      font-size: 35px
 
-@media (max-width: 820px)
-  .emailFormWrapper
-    margin-top: 15px
+          .rightSide
+            justify-content: center
 
-    .requestForm
-      width: 100%
-      min-height: 200px
+            .emailFormWrapper
+              .requestForm
+                width: 100%
 
-      form
-        .inputField
-          height: 40px
+                .inputField
+                  height: 60px
+                  margin-bottom: 25px
 
-        .button
-          button
-            height: 40px
+                .button
+                  button
+                    height: 55px
 
-    .responseForm
-      width: 100%
-      min-height: 200px
+              .responseForm
+                width: 100%
 
-      h3
-        font-size: 30px
 
-      p
-        font-size: 18px
+@media (max-width: 930px)
+
   .appWrapper
-    grid-template-rows: 115px 1fr 100px
+    grid-template-rows: 90px 1fr 100px
+    grid-row-gap: 20px
 
     .container
+      .navbarWrapper
+        .navbarMenu
+          &.active
+            overflow: auto
+
       .homeWrapper
         .background
           &.horizontal
@@ -696,6 +893,11 @@ body
           &.horizontal
             grid-template-columns: 1fr
 
+            .rightSide
+              .emailFormWrapper
+                .requestForm
+                  width: 100%
+
           .leftSide
             .header
               h1
@@ -704,12 +906,53 @@ body
             .headerText
               padding-top: 22px
 
+            .headerIcons
+              padding-top: 25px
+              margin-bottom: 10px
+
+              .iconItemWrapper
+                padding: 5px 0
+
+                .iconItem
+                  span
+                    &:first-child
+                      font-size: 50px
+
+                    &:last-child
+                      font-size: 25px
+
+          .rightSide
+            .emailFormWrapper
+              margin-top: 15px
+
+              .requestForm
+                width: 100%
+                min-height: 200px
+
+                form
+                  .inputField
+                    height: 40px
+                    margin-bottom: 17px
+
+                  .button
+                    button
+                      height: 40px
+
+              .responseForm
+                width: 100%
+                min-height: 200px
+
+                h3
+                  font-size: 30px
+
+                p
+                  font-size: 18px
+
 
 @media (max-width: 767px)
 
 
   .appWrapper
-    height: 100vh
     display: grid
     grid-template-columns: 100vw
     grid-template-rows: 50px 1fr 70px
@@ -749,6 +992,7 @@ body
               font-size: 9px
 
         .navbarMenu
+          padding-bottom: 50px
           top: 50px
 
         .navbarContacts
@@ -821,6 +1065,31 @@ body
 
 
         .headerContent
+          &.horizontal
+            .leftSide
+              .header
+                h1
+                  font-size: 40px
+
+              .headerText
+                padding-top: 15px
+
+                h2
+                  font-size: 22px
+
+              .headerIcons
+                margin-bottom: 17px
+
+                .iconItemWrapper
+                  padding: 4px 0
+
+                  .iconItem
+                    span
+                      &:first-child
+                        font-size: 32px
+
+                      &:last-child
+                        font-size: 19px
 
           .leftSide
             .header
@@ -852,6 +1121,7 @@ body
 
           .rightSide
             margin-bottom: 10px
+
 
     .footerWrapper
       .findUs
@@ -909,17 +1179,18 @@ body
 
         .headerContent
           padding: 0
+
           .leftSide
-
-
             .header
               padding-top: 20px
 
               h1
-                font-size: 30px
+                font-size: 39px
                 border-bottom: 3px solid #DA251D
 
             .headerText
+              padding-top: 12px
+
               h2
                 font-size: 20px
                 line-height: 1.4
@@ -997,6 +1268,10 @@ body
       .homeWrapper
         .headerContent
           .leftSide
+            .header
+              h1
+                font-size: 35px
+
             .headerIcons
               .iconItemWrapper
                 .iconItem
@@ -1011,7 +1286,6 @@ body
   .emailFormWrapper
     .errorMessage
       font-size: 14px
-
 
 
   .appWrapper
@@ -1031,6 +1305,10 @@ body
       .homeWrapper
         .headerContent
           .leftSide
+            .header
+              h1
+                font-size: 30px
+
             .headerIcons
               .iconItemWrapper
                 .iconItem
@@ -1040,3 +1318,8 @@ body
 
                     &:last-child
                       font-size: 17px
+
+
+
+
+

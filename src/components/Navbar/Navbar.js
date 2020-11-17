@@ -4,6 +4,15 @@ import {NavLink} from "react-router-dom";
 
 const Navbar = (props) => {
     const [activeBurger, setActiveBurger] = useState(false)
+
+    if (activeBurger) {
+        document.querySelector("body").classList.add("lock")
+        let screenHeight = window.innerHeight
+        console.log(screenHeight)
+    } else {
+        document.querySelector("body").classList.remove("lock")
+    }
+
     return (
         <div className="container">
             <div className="navbarWrapper">
@@ -29,7 +38,9 @@ const Navbar = (props) => {
                     <a href="tel:+73532270787"><span>8 (3532) 27-07-87</span></a>
 
                 </div>
-                <div className={`burgerMenu${activeBurger ? " active" : ""}`} onClick={()=> {setActiveBurger(!activeBurger)}}>
+                <div className={`burgerMenu${activeBurger ? " active" : ""}`} onClick={() => {
+                    setActiveBurger(!activeBurger)
+                }}>
                     <span></span>
                 </div>
             </div>

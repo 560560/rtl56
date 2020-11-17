@@ -2,7 +2,9 @@ import React from 'react';
 
 const Leasing = (props) => {
     return (
-        <div>Leasing</div>
+        <div className="leasing">
+
+        </div>
     );
 }
 
