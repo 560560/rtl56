@@ -28,7 +28,7 @@ const Home = (props) => {
         <div className="homeWrapper">
             <div className="background" id="background">
                 <img src={bgHome} alt="Лизинг для юридических лиц и ИП" title="Лизинг для юридических лиц и ИП"/>
-            </div>"
+            </div>
             <div className="headerContent" id="headerContent">
                 <div className="leftSide">
                     <div className="header">
@@ -55,7 +55,7 @@ const Home = (props) => {
                 </div>
 
                 <div className="rightSide">
-                    <EmailForm sitePage="Главная"/>
+                    <EmailForm sitePage="Главная" buttonTitle="Оставить заявку"/>
 
                 </div>
 

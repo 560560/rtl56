@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import * as axios from "axios";
 
 
-const EmailForm = ({sitePage}) => {
+const EmailForm = ({sitePage, buttonTitle}) => {
 
     const instance = axios.create({
         baseURL: "https://api.emailjs.com/api/v1.0/email/",
@@ -24,6 +24,7 @@ const EmailForm = ({sitePage}) => {
                 'name': formData.name,
                 'phone': formData.phone,
                 'sitePage': sitePage,
+                'buttonTitle': buttonTitle
             }
 
         }
@@ -111,7 +112,7 @@ const EmailForm = ({sitePage}) => {
                                 {errors.phone && <div className="errorMessage">{errors.phone}</div>}
 
                                 <div className="button">
-                                    <button type="submit" disabled={isFetching} onClick={() => setValidationRequired(true)}><h4>Оставить заявку</h4></button>
+                                    <button type="submit" disabled={isFetching} onClick={() => setValidationRequired(true)}><h4>{buttonTitle}</h4></button>
                                 </div>
                                 <div className="infoText">
                                     <p>Наш специалист перезвонит Вам в ближайшее время для предоставления предварительного решения. Оставляя заявку, Вы даёте

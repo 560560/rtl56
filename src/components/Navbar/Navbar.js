@@ -1,9 +1,18 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import logo from "../../assets/images/logo.png"
 import {NavLink} from "react-router-dom";
+import {withRouter} from "react-router";
 
 const Navbar = (props) => {
+
     const [activeBurger, setActiveBurger] = useState(false)
+    useEffect(()=> {
+        if (props.location.pathname === "/" || props.location.pathname === "/home") {
+            document.querySelector("#homeLink").children.item(0).classList.add("active")
+        }else {
+            document.querySelector("#homeLink").children.item(0).classList.remove("active")
+        }
+    }, [props.location.pathname])
 
     if (activeBurger) {
         document.querySelector("body").classList.add("lock")
@@ -26,7 +35,7 @@ const Navbar = (props) => {
                 </div>
                 <div className={`navbarMenu${activeBurger ? " active" : ""}`}>
                     <ul>
-                        <li><NavLink to="/home">Главная</NavLink></li>
+                        <li id="homeLink"><NavLink to="/home">Главная</NavLink></li>
                         <li><NavLink to="/leasing">Услуги лизинга</NavLink></li>
                         <li><NavLink to="/docs">Документы</NavLink></li>
                         <li><NavLink to="/faq">Вопрос-ответ</NavLink></li>
@@ -48,4 +57,4 @@ const Navbar = (props) => {
     );
 }
 
-export default Navbar;
+export default withRouter(Navbar);
