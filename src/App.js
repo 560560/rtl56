@@ -3,13 +3,13 @@ import './styles/reset.css';
 import './styles/main.sass';
 import {Switch, Route, withRouter} from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Home/Home";
 import Leasing from "./components/Leasing/Leasing";
 import Docs from "./components/Docs/Docs";
 import FAQ from "./components/FAQ/FAQ";
 import About from "./components/About/About";
 import Contacts from "./components/Contacts/Contacts";
 import Footer from "./components/Footer/Footer";
+import Home from "./components/Home/Home";
 
 
 const App = () => {

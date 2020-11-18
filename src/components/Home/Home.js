@@ -1,29 +1,50 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import bgHome from "../../assets/images/bcgHome.jpg"
 import {GoCalendar} from "react-icons/go";
 import {GiPayMoney, GiTwoCoins} from "react-icons/gi";
 import {BsClockHistory} from "react-icons/bs";
 import EmailForm from "../EmailForm/EmailForm";
 
-const horizontalTest = () => {
-    if (window.innerWidth >= window.innerHeight) {
-        document.querySelector("#background").classList.add("horizontal")
-        document.querySelector("#headerContent").classList.add("horizontal")
 
-    } else {
-        document.querySelector("#background").classList.remove("horizontal")
-        document.querySelector("#headerContent").classList.remove("horizontal")
+const Home = () => {
+    const [isHorizontal, setIsHorizontal] = useState(null)
+
+    const horizontalTest = () => {
+
+        if (window.screen.orientation.type === "landscape-primary") {
+
+            document.querySelector("#background").classList.add("horizontal")
+            document.querySelector("#background").classList.remove("manualHeight")
+            document.querySelector("#headerContent").classList.add("horizontal")
+
+        } else{
+
+            document.querySelector("#background").classList.remove("horizontal")
+            document.querySelector("#background").classList.add("manualHeight")
+            document.querySelector("#headerContent").classList.remove("horizontal")
+        }
     }
-}
 
-const Home = (props) => {
+    const screenHeightDetection = () => {
+
+        let screenHeight = window.screen.height
+
+        if (!isHorizontal) {
+            document.getElementsByClassName('manualHeight')[0].style.height = `${screenHeight}px`
+        }
+        document.querySelector(".inputField").setAttribute("placeholder", screenHeight)
+    }
+
     useEffect(() => {
         horizontalTest()
-    }, [])
+    })
 
-    window.addEventListener("resize", function () {
+    window.addEventListener("orientationchange", function () {
+
         horizontalTest()
     }, false);
+
+
     return (
         <div className="homeWrapper">
             <div className="background" id="background">
