@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
+import {withRouter} from "react-router";
 import bgHome from "../../assets/images/bcgHome.jpg"
 import {GoCalendar} from "react-icons/go";
 import {GiPayMoney, GiTwoCoins} from "react-icons/gi";
@@ -6,33 +7,26 @@ import {BsClockHistory} from "react-icons/bs";
 import EmailForm from "../EmailForm/EmailForm";
 
 
-const Home = () => {
-    const [isHorizontal, setIsHorizontal] = useState(null)
-
+const Home = ({location}) => {
     const horizontalTest = () => {
-
-        if (window.screen.orientation.type === "landscape-primary") {
-
+        if (window.screen.orientation.type === "landscape-primary" && (location.pathname === "/" || location.pathname === "/home")) {
             document.querySelector("#background").classList.add("horizontal")
             document.querySelector("#background").classList.remove("manualHeight")
             document.querySelector("#headerContent").classList.add("horizontal")
 
-        } else{
 
+        } else if (location.pathname === "/" || location.pathname === "/home"){
             document.querySelector("#background").classList.remove("horizontal")
             document.querySelector("#background").classList.add("manualHeight")
             document.querySelector("#headerContent").classList.remove("horizontal")
+            screenHeightDetection()
         }
     }
 
     const screenHeightDetection = () => {
-
         let screenHeight = window.screen.height
-
-        if (!isHorizontal) {
-            document.getElementsByClassName('manualHeight')[0].style.height = `${screenHeight}px`
-        }
-        document.querySelector(".inputField").setAttribute("placeholder", screenHeight)
+        document.getElementsByClassName('manualHeight')[0].style.height = `${screenHeight}px`
+        //document.querySelector(".inputField").setAttribute("placeholder", screenHeight)
     }
 
     useEffect(() => {
@@ -40,7 +34,6 @@ const Home = () => {
     })
 
     window.addEventListener("orientationchange", function () {
-
         horizontalTest()
     }, false);
 
@@ -76,7 +69,7 @@ const Home = () => {
                 </div>
 
                 <div className="rightSide">
-                    <EmailForm sitePage="Главная" buttonTitle="Оставить заявку"/>
+                    <EmailForm sitePage="Главная" buttonTitle="Оставить заявку" additionalInfo="home"/>
 
                 </div>
 
@@ -87,4 +80,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default withRouter(Home);

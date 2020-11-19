@@ -6,10 +6,30 @@ import {withRouter} from "react-router";
 const Navbar = (props) => {
 
     const [activeBurger, setActiveBurger] = useState(false)
-    useEffect(()=> {
+    useEffect(() => {
         if (props.location.pathname === "/" || props.location.pathname === "/home") {
             document.querySelector("#homeLink").children.item(0).classList.add("active")
-        }else {
+            document.querySelector(".navbarWrapper").classList = "navbarWrapper home"
+            document.querySelector(".appWrapper").classList = "appWrapper home"
+        } else if (props.location.pathname === "/leasing") {
+            document.querySelector(".navbarWrapper").classList = "navbarWrapper leasing"
+            document.querySelector(".appWrapper").classList = "appWrapper leasing"
+            document.querySelector("#homeLink").children.item(0).classList.remove("active")
+        } else if (props.location.pathname === "/docs") {
+            document.querySelector(".navbarWrapper").classList = "navbarWrapper documents"
+            document.querySelector(".appWrapper").classList = "appWrapper documents"
+            document.querySelector("#homeLink").children.item(0).classList.remove("active")
+        } else if (props.location.pathname === "/faq") {
+            document.querySelector(".navbarWrapper").classList = "navbarWrapper faq"
+            document.querySelector(".appWrapper").classList = "appWrapper faq"
+            document.querySelector("#homeLink").children.item(0).classList.remove("active")
+        } else if (props.location.pathname === "/about") {
+            document.querySelector(".navbarWrapper").classList = "navbarWrapper about"
+            document.querySelector(".appWrapper").classList = "appWrapper about"
+            document.querySelector("#homeLink").children.item(0).classList.remove("active")
+        } else if (props.location.pathname === "/contacts") {
+            document.querySelector(".navbarWrapper").classList = "navbarWrapper contacts"
+            document.querySelector(".appWrapper").classList = "appWrapper contacts"
             document.querySelector("#homeLink").children.item(0).classList.remove("active")
         }
     }, [props.location.pathname])

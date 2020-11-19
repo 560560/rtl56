@@ -4,7 +4,14 @@ import * as Yup from 'yup';
 import * as axios from "axios";
 
 
-const EmailForm = ({sitePage, buttonTitle}) => {
+const EmailForm = ({sitePage, buttonTitle, additionalInfo}) => {
+
+    const formAdditionalInfo = {
+        "home": "Наш специалист перезвонит Вам в ближайшее время для предоставления предварительного решения. " +
+            "Оставляя заявку, Вы даёте согласие на обработку персональных данных.",
+        "contacts": "Наш специалист перезвонит Вам в ближайшее время для предоставления ифнормации по интересующим Вас вопросам. " +
+            "Оставляя заявку на обратный звонок, Вы даёте согласие на обработку персональных данных.",
+    }
 
     const instance = axios.create({
         baseURL: "https://api.emailjs.com/api/v1.0/email/",
@@ -115,8 +122,7 @@ const EmailForm = ({sitePage, buttonTitle}) => {
                                     <button type="submit" disabled={isFetching} onClick={() => setValidationRequired(true)}><h4>{buttonTitle}</h4></button>
                                 </div>
                                 <div className="infoText">
-                                    <p>Наш специалист перезвонит Вам в ближайшее время для предоставления предварительного решения. Оставляя заявку, Вы даёте
-                                        согласие на обработку персональных данных.</p>
+                                    <p>{formAdditionalInfo[additionalInfo]}</p>
                                 </div>
                             </Form>)
                         }
