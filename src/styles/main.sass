@@ -187,11 +187,10 @@ body
 
 
   &.contacts
-    background: radial-gradient(#000 15%, transparent 16%) 0 0, radial-gradient(#000 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px
-    background-color: #282828
+    background: radial-gradient(#000 15%, transparent 16%) 0 0, radial-gradient(#000 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 8px 9px
+    background-color: #212121
     background-size: 16px 16px
     background-blend-mode: revert
-
 
 
   .navbarWrapper
@@ -203,8 +202,6 @@ body
     justify-content: space-between
     align-items: center
     background-color: #D6D8D9
-
-
 
 
     .logo
@@ -269,7 +266,6 @@ body
               transition: 0.20s ease-in
               color: #DA251D
               text-shadow: #DA251D 0 0 1px
-
 
     .navbarContacts
       display: flex
@@ -429,11 +425,26 @@ body
         .block-item
           display: grid
           grid-template-columns: 1fr 5fr
-          color: #D6D8D9
+          color: #e2e2e2
+          //&.whatsapp-block
+          //  .icon
+          //    color: #2AB640
+          //
+          //&.email-block
+          //  .icon
+          //    color: #ffffff
+          //
+          //&.phone-block
+          //  .icon
+          //    color: #1D4383
+          //
+          //&.address-block
+          //  .icon
+          //    color: #DA251D
 
           .icon
-
             font-size: 50px
+
 
           .description
             display: grid
@@ -459,6 +470,7 @@ body
               font-size: 18px
               letter-spacing: 0.5px
               line-height: 1.4
+
 
       .rightSide
         display: flex
@@ -788,6 +800,7 @@ body
         .requisitesWrapper
           border-top: none
           padding-top: 15px
+
           h2
             font-size: 30px
 
@@ -831,8 +844,8 @@ body
         .navbarMenu
           padding-bottom: 90px
           z-index: 15
-          background-color: rgba(255, 255, 255, 1)
           position: fixed
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 18%, rgba(255,255,255,0.75) 36%, rgba(255,255,255,0.9) 54%, rgba(255,255,255,1) 72%)
           left: 100%
           top: 90px
           width: 100%
@@ -847,6 +860,8 @@ body
               text-align: right
 
           &.active
+
+
             left: 0
 
         .navbarContacts
@@ -1391,8 +1406,10 @@ body
 
       .contactsWrapper
         padding: 0 15px
+
         .contactsHeader
           margin: 10px 0 20px
+
           h1
             font-size: 34px
             border-bottom-width: 4px
@@ -1423,8 +1440,10 @@ body
               .requestForm
                 width: 100%
                 min-height: 250px
+
                 .inputField
                   height: 40px
+
                 .button
                   button
                     height: 40px
@@ -1439,8 +1458,10 @@ body
           .requisites
             padding-bottom: 20px
             border-bottom: 1px dashed #dadada
+
             .requisitesHeader
               justify-content: center
+
             p
               line-height: 1.4
               font-size: 24px
@@ -1448,6 +1469,7 @@ body
           .generalWrapper
             margin-top: 30px
             justify-content: center
+
             .general
 
 
@@ -1544,14 +1566,18 @@ body
             grid-template-columns: 1fr
             grid-template-rows: repeat(4, 1fr)
             grid-row-gap: 5px
+
             .block-item
               .icon
                 font-size: 50px
+
               .description
                 .title
                   font-size: 25px
+
                 .text
                   font-size: 20px
+
         .requisitesWrapper
           h2
             font-size: 30px
@@ -1593,6 +1619,7 @@ body
 
                     &:last-child
                       font-size: 21px
+
       .contactsWrapper
         .contactsContent
           .leftSide
@@ -1600,15 +1627,17 @@ body
             .block-item
               .icon
                 font-size: 45px
+
               .description
                 .title
                   font-size: 22px
+
                 .text
                   font-size: 17px
+
         .requisitesWrapper
           h2
             font-size: 27px
-
 
 
 @media (max-width: 361px)
@@ -1647,6 +1676,7 @@ body
 
                     &:last-child
                       font-size: 17px
+
       .contactsWrapper
         .contactsContent
           .leftSide
@@ -1654,17 +1684,22 @@ body
             .block-item
               .icon
                 font-size: 40px
+
               .description
                 .title
                   font-size: 20px
+
                 .text
                   font-size: 15px
+
         .requisitesWrapper
           h2
             font-size: 25px
+
           .requisites
             p
               font-size: 21px
+
             span
               font-size: 13px
               margin-bottom: 15px
