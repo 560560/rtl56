@@ -98,7 +98,7 @@ const Contacts = (props) => {
             <div className="map">
                 <YMaps>
                     <Map defaultState={mapData} width="100%" height="400px">
-                        {coordinates.map(coordinate => <Placemark geometry={coordinate} key={Math.random()}/>)}
+                        {coordinates.map(coordinate => <Placemark geometry={coordinate} key={Math.random()} options={{iconColor: '#da251d'}}/>)}
                     </Map>
                 </YMaps>
             </div>
