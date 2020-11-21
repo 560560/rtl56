@@ -192,6 +192,9 @@ body
     background-size: 16px 16px
     background-blend-mode: revert
 
+  &.leasing, &.faq, &.documents, &.about
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)
+
 
   .navbarWrapper
     position: relative
@@ -201,8 +204,10 @@ body
     height: 100px
     justify-content: space-between
     align-items: center
-    background-color: #D6D8D9
+    background-color: #e4e5e5
 
+    &.leasing, &.faq, &.documents, &.about
+      box-shadow: 0 0 10px 5px rgb(167, 167, 167)
 
     .logo
       display: flex
@@ -394,9 +399,77 @@ body
         justify-content: center
         align-items: center
 
+  .leasingWrapper
+    display: grid
+    height: 100%
+    grid-template-columns: 1fr 40px
+    .carousel
+      opacity: 1
+      transition: opacity 0.3s ease
+      &.cross
+        opacity: 0
+
+      .leasingItem
+        padding: 30px
+        height: 100%
+        display: grid
+        grid-template-columns: 3fr 2fr
+        grid-template-rows: 1fr
+        grid-column-gap: 40px
+
+        .leftSide
+          text-align: left
+          display: block
+          padding-left: 30px
+          .header
+            display: inline-flex
+            margin-bottom: 60px
+            h1
+              font-size: 40px
+              font-family: "Raleway", "sans-serif"
+              font-weight: 600
+              color: rgba(0, 0, 0, 0.90)
+              border-bottom: 4px solid #DA251D
+          .description
+            display: grid
+            grid-template-columns: 30px 1fr
+            grid-row-gap: 30px
+            p, span
+              font-size: 27px
+              font-family: "Scada", "sans-serif"
+              color: rgba(0, 0, 0, 0.90)
+        .rightSide
+          display: grid
+          align-items: center
+          padding-right: 30px
+          .leasingImage
+            img
+              width: 100%
+    .paginatorWrapper
+      display: flex
+      align-items: center
+      justify-content: center
+      .paginator
+        display: flex
+        flex-direction: column
+        padding: 5px 0
+        border-radius: 20px
+        border: 1px solid rgba(218, 37, 29, 0.5)
+        .paginatorItem
+          width: 20px
+          height: 20px
+          background-color: #DA251D
+          border-radius: 50%
+          margin: 10px 10px
+          opacity: 0.3
+          transition: opacity 0.3s ease
+          cursor: pointer
+          &.active
+            opacity: 1
+
+
+
   .contactsWrapper
-
-
     .contactsHeader
       margin: 30px 0 20px
       display: inline-flex
@@ -714,6 +787,9 @@ body
         height: 100%
         margin-top: 0
 
+        &.leasing, &.faq, &.documents, &.about
+          box-shadow: 0 0 8px 4px rgb(167, 167, 167)
+
         .logo
           width: 295px
 
@@ -845,7 +921,7 @@ body
           padding-bottom: 90px
           z-index: 15
           position: fixed
-          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 18%, rgba(255,255,255,0.75) 36%, rgba(255,255,255,0.9) 54%, rgba(255,255,255,1) 72%)
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 18%, rgba(255, 255, 255, 0.75) 36%, rgba(255, 255, 255, 0.9) 54%, rgba(255, 255, 255, 1) 72%)
           left: 100%
           top: 90px
           width: 100%
