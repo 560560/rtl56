@@ -36,8 +36,6 @@ const Navbar = (props) => {
 
     if (activeBurger) {
         document.querySelector("body").classList.add("lock")
-        let screenHeight = window.innerHeight
-        console.log(screenHeight)
     } else {
         document.querySelector("body").classList.remove("lock")
     }

@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import Cars from "./Cars";
 import Tracks from "./Tracks";
 import Buses from "./Buses";
+import Special from "./Special";
+import Equipment from "./Equipment";
 
 const Leasing = (props) => {
     const [slide, setSlide] = useState(0)
@@ -42,18 +44,27 @@ const Leasing = (props) => {
         }, 400)
     }
 
-    const pages = [<Cars/>, <Tracks/>, <Buses/>]
+    const touchHandler = (e) => {
+        //console.log(e)
+    }
+    const moveHandler = (e) => {
+        console.log(e)
+    }
+
+    const pages = [<Cars/>, <Tracks/>, <Buses/>, <Special/>, <Equipment/>]
 
     return (
         <div className="leasingWrapper" onWheel={scrollHandler}>
-            <div className="carousel" id="carousel">
+            <div className="carousel" id="carousel" onTouchStart={touchHandler} onTouchMove={moveHandler}>
                 {pages[slide]}
             </div>
             <div className="paginatorWrapper">
                 <div className="paginator">
-                    {pages.map((p, index) => <div key={index} className={`paginatorItem${index === slide ? " active" : ""}`} onClick={() => {
-                        onPaginatorClick(index)
-                    }}></div>)}
+                    {pages.map((p, index) => <div key={index}
+                                                  className={`paginatorItem${index === slide ? " active" : ""}`}
+                                                  onClick={() => {
+                                                      onPaginatorClick(index)
+                                                  }}></div>)}
                 </div>
 
             </div>

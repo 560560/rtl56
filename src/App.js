@@ -9,7 +9,7 @@ import FAQ from "./components/FAQ/FAQ";
 import About from "./components/About/About";
 import Contacts from "./components/Contacts/Contacts";
 import Footer from "./components/Footer/Footer";
-import Home from "./components/Home/Home";
+import HomeContainer from "./components/Home/HomeContainer";
 
 
 const App = () => {
@@ -19,8 +19,8 @@ const App = () => {
             <Navbar/>
             <div className="container">
                 <Switch>
-                    <Route exact path="/" component={Home}/>
-                    <Route exact path="/home" component={Home}/>
+                    <Route exact path="/" component={HomeContainer}/>
+                    <Route exact path="/home" component={HomeContainer}/>
                     <Route exact path="/leasing" component={Leasing}/>
                     <Route exact path="/docs" component={Docs}/>
                     <Route exact path="/faq" component={FAQ}/>

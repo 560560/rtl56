@@ -8,37 +8,7 @@ import EmailForm from "../EmailForm/EmailForm";
 
 
 const Home = ({location}) => {
-    const horizontalTest = () => {
-        if (window.screen.orientation.type === "landscape-primary" && (location.pathname === "/" || location.pathname === "/home")) {
-            document.querySelector("#background").classList.add("horizontal")
-            document.querySelector("#background").classList.remove("manualHeight")
-            document.querySelector("#headerContent").classList.add("horizontal")
-
-
-        } else if (location.pathname === "/" || location.pathname === "/home"){
-            document.querySelector("#background").classList.remove("horizontal")
-            document.querySelector("#background").classList.add("manualHeight")
-            document.querySelector("#headerContent").classList.remove("horizontal")
-            screenHeightDetection()
-        }
-    }
-
-    const screenHeightDetection = () => {
-        let screenHeight = window.screen.height
-        document.getElementsByClassName('manualHeight')[0].style.height = `${screenHeight}px`
-        //document.querySelector(".inputField").setAttribute("placeholder", screenHeight)
-    }
-
-    useEffect(() => {
-        horizontalTest()
-    })
-
-    window.addEventListener("orientationchange", function () {
-        horizontalTest()
-    }, false);
-
-
-    return (
+      return (
         <div className="homeWrapper">
             <div className="background" id="background">
                 <img src={bgHome} alt="Лизинг для юридических лиц и ИП" title="Лизинг для юридических лиц и ИП"/>

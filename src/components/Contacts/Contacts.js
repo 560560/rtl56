@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import EmailForm from "../EmailForm/EmailForm";
 import {IoIosCall, IoLogoWhatsapp} from "react-icons/io";
 import {FiMail} from "react-icons/fi";
@@ -54,7 +54,7 @@ const Contacts = (props) => {
                         <div className="icon"><ImLocation/></div>
                         <div className="description">
                             <div className="title">Адрес:</div>
-                            <div className="text"><a href="https://yandex.ru/maps/?rtext=~51.774107%2C55.158696" target="_blank">460000 Россия, г.Оренбург,<br/> ул.
+                            <div className="text"><a href="https://yandex.ru/maps/?rtext=~51.774107%2C55.158696" target="_blank" rel="noreferrer" >460000 Россия, г.Оренбург,<br/> ул.
                                 Мало-луговая, д.3/1 оф.7</a></div>
                         </div>
 
