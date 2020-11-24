@@ -5,7 +5,7 @@ import Buses from "./Buses";
 import Special from "./Special";
 import Equipment from "./Equipment";
 
-const Leasing = (props) => {
+const Leasing = ({showRightSide}) => {
     const [slide, setSlide] = useState(0)
 
     const scrollHandler = (e) => {
@@ -38,9 +38,11 @@ const Leasing = (props) => {
 
     const carouselAnimation = (destination) => {
         document.querySelector("#carousel").classList.add("cross")
+
         setTimeout(() => {
-            document.querySelector("#carousel").classList.remove("cross")
             setSlide(destination)
+            document.querySelector("#carousel").classList.remove("cross")
+
         }, 400)
     }
 
@@ -51,7 +53,8 @@ const Leasing = (props) => {
         console.log(e)
     }
 
-    const pages = [<Cars/>, <Tracks/>, <Buses/>, <Special/>, <Equipment/>]
+    const pages = [<Cars showRightSide={showRightSide}/>, <Tracks showRightSide={showRightSide}/>, <Buses showRightSide={showRightSide}/>,
+        <Special showRightSide={showRightSide}/>, <Equipment showRightSide={showRightSide}/>]
 
     return (
         <div className="leasingWrapper" onWheel={scrollHandler}>

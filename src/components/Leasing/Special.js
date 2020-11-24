@@ -1,9 +1,11 @@
 import React from 'react';
 import specialLogo from "../../assets/images/specialLogo.png";
 
-const Special = (props) => {
+const Special = ({showRightSide}) => {
+
+
     return (
-        <div className="leasingItem">
+        <div className="leasingItem special">
             <div className="leftSide">
                 <div className="header">
                     <h1>Лизинг специальной техники</h1>
@@ -16,12 +18,13 @@ const Special = (props) => {
                     <p>5.</p> <span>Срок лизинга от 12 месяцев</span>
                 </div>
             </div>
+            {showRightSide &&
             <div className="rightSide">
                 <div className="leasingImage">
                     <img src={specialLogo} alt="Лизинг специальной техники"/>
                 </div>
             </div>
-
+            }
 
         </div>
     );

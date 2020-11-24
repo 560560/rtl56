@@ -1,9 +1,11 @@
 import React from 'react';
 import busesLogo from "../../assets/images/busesLogo.png";
 
-const Buses = (props) => {
+const Buses = ({showRightSide}) => {
+
+
     return (
-        <div className="leasingItem">
+        <div className="leasingItem buses">
             <div className="leftSide">
                 <div className="header">
                     <h1>Лизинг коммерческого транспорта</h1>
@@ -16,11 +18,13 @@ const Buses = (props) => {
                     <p>5.</p> <span>Срок лизинга от 12 месяцев</span>
                 </div>
             </div>
+            {showRightSide &&
             <div className="rightSide">
                 <div className="leasingImage">
                     <img src={busesLogo} alt="Лизинг коммерческого транспорта"/>
                 </div>
             </div>
+            }
         </div>
     );
 }

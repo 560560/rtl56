@@ -409,9 +409,11 @@ body
 
     .carousel
       opacity: 1
-      transition: opacity 0.3s ease
+
+
       &.cross
         opacity: 0
+        transition: opacity 0.3s ease
 
       .leasingItem
         padding: 30px
@@ -425,42 +427,53 @@ body
           text-align: left
           display: block
           padding-left: 30px
+
           .header
             display: inline-flex
             margin-bottom: 60px
+
             h1
               font-size: 40px
               font-family: "Raleway", "sans-serif"
               font-weight: 600
               color: rgba(0, 0, 0, 0.90)
               border-bottom: 4px solid #DA251D
+
           .description
             margin-top: 40px
             display: grid
             grid-template-columns: 30px 1fr
             grid-row-gap: 30px
+
             p, span
               font-size: 27px
               font-family: "Scada", "sans-serif"
               color: rgba(0, 0, 0, 0.90)
+
         .rightSide
           display: grid
           align-items: center
           padding-right: 30px
+
           .leasingImage
             img
               width: 100%
+
     .paginatorWrapper
       display: flex
       align-items: center
       justify-content: center
+
       .paginator
         display: flex
         flex-direction: column
         padding: 5px 0
         border-radius: 20px
         border: 1px solid rgba(218, 37, 29, 0.5)
+
         .paginatorItem
+          outline: none !important
+          -webkit-tap-highlight-color: transparent
           width: 20px
           height: 20px
           background-color: #DA251D
@@ -469,6 +482,7 @@ body
           opacity: 0.3
           transition: opacity 0.3s ease
           cursor: pointer
+
           &.active
             opacity: 1
 
@@ -666,44 +680,57 @@ body
     grid-template-columns: 100%
     grid-template-rows: 125px 1fr 100px
     grid-row-gap: 20px
+
     .container
       margin: 0 50px
+
       .navbarWrapper
         height: 80px
         margin-top: 25px
+
         .logo
           img
             width: 50px
+
           .logoText
             p
               font-size: 27px
+
             span
               font-size: 10px
+
         .navbarMenu
           ul
             li
               a
                 font-size: 15px
+
       .homeWrapper
         .headerContent
           .leftSide
             .header
               padding-top: 0
+
               h1
                 font-size: 45px
 
             .headerText
               padding-top: 20px
+
               h2
                 font-size: 24px
+
             .headerIcons
               .iconItemWrapper
                 padding: 6px 0
+
                 .iconItem
                   span:first-child
                     font-size: 47px
+
                   span:last-child
                     font-size: 23px
+
       .leasingWrapper
         .carousel
           .leasingItem
@@ -711,27 +738,35 @@ body
               .header
                 h1
                   font-size: 35px
+
               .description
                 span
                   font-size: 24px
+
       .contactsWrapper
         .contactsHeader
           margin: 20px 0 20px
+
           h1
             font-size: 45px
+
         .contactsContent
           .leftSide
             grid-template-rows: repeat(2, 120px)
+
             .block-item
               .icon
                 font-size: 50px
+
               .description
                 grid-template-rows: 1fr 3fr
+
           .rightSide
             .emailFormWrapper
               .requestForm
                 .inputField
                   height: 42px
+
                 .button
                   button
                     height: 42px
@@ -754,12 +789,15 @@ body
 
       .homeWrapper
         padding: 0 50px
+
         .background
           img
             height: auto
             width: 100%
+
       .leasingWrapper
         padding: 0 50px
+
       .contactsWrapper
         padding: 0 50px
 
@@ -827,17 +865,21 @@ body
 
             .headerIcons
               padding-top: 70px
+
               .iconItemWrapper
                 padding: 8px 0
 
       .leasingWrapper
         align-items: center
+
         .carousel
           .leasingItem
             margin-bottom: 40px
+
             .leftSide
               .description
                 grid-row-gap: 25px
+
                 p, span
                   font-size: 22px
 
@@ -870,6 +912,7 @@ body
 @media (max-width: 1366px) and (max-height: 800px)
   .appWrapper
     grid-template-rows: 65px 1fr 85px
+
     .container
       .navbarWrapper
         .navbarMenu
@@ -877,52 +920,70 @@ body
             li
               a
                 font-size: 15px
+
         .navbarContacts
           padding-right: 20px
+
           a
             font-size: 17px
+
             span
               padding-left: 0
+
       .homeWrapper
         .background
           img
             width: 100%
             height: auto
+
         .headerContent
           margin-top: 35px
+
           .leftSide
             .header
               h1
                 font-size: 40px
+
             .headerText
               padding-top: 12px
+
               h2
                 font-size: 20px
+
             .headerIcons
               .iconItemWrapper
                 padding: 3px 0
+
                 .iconItem span:first-child
                   font-size: 40px
+
                 .iconItem span:last-child
                   font-size: 20px
+
           .rightSide
             align-items: flex-end
+
             .emailFormWrapper
               .requestForm
                 .inputField
                   height: 45px
+
       .leasingWrapper
         .carousel
           .leasingItem
             margin-bottom: 0
+
             .leftSide
               .header
                 h1
                   font-size: 30px
+
               .description
                 grid-row-gap: 21px
+
                 p, span
                   font-size: 20px
+
       .footerWrapper
         .footerItem
           .icon
@@ -1274,19 +1335,25 @@ body
           .leasingItem
             grid-template-columns: 1fr
             grid-row-gap: 30px
+
             .leftSide
               .header
                 h1
                   font-size: 42px
+
               .description
                 grid-row-gap: 25px
+
                 p, span
                   font-size: 27px
+
             .rightSide
               .leasingImage
                 text-align: center
+
                 img
                   width: 80%
+
       .contactsWrapper
         .contactsHeader
           h1
@@ -1340,20 +1407,26 @@ body
     .container
       .leasingWrapper
         padding: 0 20px
+
         .carousel
           .leasingItem
             grid-template-columns: 4fr 3fr
             grid-template-rows: 1fr
             grid-column-gap: 20px
+
             .leftSide
               padding-left: 0
+
               .header
                 margin-bottom: 20px
+
                 h1
                   font-size: 28px
+
               .description
                 p, span
                   font-size: 20px
+
             .rightSide
               .leasingImage
                 img
@@ -1398,6 +1471,7 @@ body
 
             .headerText
               padding-top: 13px
+
               h2
                 font-size: 26px
 
@@ -1499,15 +1573,19 @@ body
             .leftSide
               .header
                 margin-bottom: 25px
+
                 h1
                   font-size: 30px
+
               .description
                 p, span
                   font-size: 20px
+
             .rightSide
               .leasingImage
                 img
                   width: 70%
+
       .footerWrapper
         padding-top: 10px
 
@@ -1520,6 +1598,41 @@ body
 
           .text
             text-align: center
+
+@media (max-width: 930px) and (max-height: 500px)
+  .appWrapper
+    grid-row-gap: 0
+
+    .container
+      .leasingWrapper
+        grid-template-columns: 1fr
+        grid-template-rows: 1fr 75px
+        .carousel
+          .leasingItem
+            grid-template-columns: 1fr
+            padding: 10px 15px 0
+
+            .leftSide
+              .header
+                margin-bottom: 0
+                h1
+                  font-size: 28px
+                  border-width: 3px
+              .description
+                grid-row-gap: 10px
+                margin-top: 15px
+                p, span
+                  font-size: 17px
+
+        .paginatorWrapper
+          .paginator
+            padding: 0
+            margin-top: 10px
+            flex-direction: row
+            .paginatorItem
+              width: 20px
+              height: 20px
+
 
 @media (max-width: 767px)
   .appWrapper
@@ -1636,6 +1749,7 @@ body
         .headerContent
           &.horizontal
             margin-top: 25px
+
             .leftSide
               .header
                 h1
@@ -1660,10 +1774,12 @@ body
 
                       &:last-child
                         font-size: 19px
+
             .rightSide
               .emailFormWrapper
                 .requestForm
                   min-height: 200px
+
                   .inputField
                     height: 40px
 
@@ -1793,6 +1909,17 @@ body
             line-height: 1.2
 
 
+@media (max-width: 767px) and (max-height: 400px)
+  .appWrapper
+    grid-row-gap: 0
+    .container
+      .leasingWrapper
+
+        .paginatorWrapper
+          .paginator
+            margin-top: 0
+
+
 @media (max-width: 520px)
   .emailFormWrapper
     .requestForm
@@ -1818,6 +1945,7 @@ body
 
   .appWrapper
     grid-template-rows: 50px 1fr 160px
+    grid-row-gap: 0
 
     .container
       .homeWrapper
@@ -1855,6 +1983,47 @@ body
                     &:last-child
                       font-size: 23px
 
+      .leasingWrapper
+
+        padding: 0 15px
+        grid-column-gap: 15px
+        .carousel
+          .leasingItem
+            grid-template-columns: 1fr
+            padding: 0
+            &.cars
+              background: url("../assets/images/carsMiniLogo.png") no-repeat bottom center
+              background-size:  contain
+              background-blend-mode: overlay
+            &.equipment
+              background: url("../assets/images/equipmentMiniLogo.png") no-repeat bottom center
+              background-size:  contain
+              background-blend-mode: overlay
+            &.special
+              background: url("../assets/images/specialMiniLogo.png") no-repeat bottom center
+              background-size:  contain
+              background-blend-mode: overlay
+            &.buses
+              background: url("../assets/images/busesMiniLogo.png") no-repeat bottom center
+              background-size:  contain
+              background-blend-mode: overlay
+            &.tracks
+              background: url("../assets/images/tracksMiniLogo.png") no-repeat bottom center
+              background-size:  contain
+              background-blend-mode: overlay
+
+
+
+            .leftSide
+              padding-left: 10px
+              .header
+                margin-bottom: 0
+                h1
+                  border-bottom: none
+                  font-size: 26px
+
+
+
       .contactsWrapper
         .contactsContent
           .leftSide
@@ -1877,7 +2046,7 @@ body
           h2
             font-size: 30px
 
-      .footerWrapper
+
 
 
 @media (max-width: 408px)
@@ -1914,6 +2083,15 @@ body
 
                     &:last-child
                       font-size: 21px
+
+      .leasingWrapper
+        margin: 15px 0
+        .carousel
+          .leasingItem
+            .leftSide
+              .description
+                p, span
+                  font-size: 18px
 
       .contactsWrapper
         .contactsContent
@@ -1972,6 +2150,13 @@ body
                     &:last-child
                       font-size: 17px
 
+      .leasingWrapper
+
+        .carousel
+          .leasingItem
+            .leftSide
+              .description
+                grid-row-gap: 17px
       .contactsWrapper
         .contactsContent
           .leftSide

@@ -7,7 +7,7 @@ import {BsClockHistory} from "react-icons/bs";
 import EmailForm from "../EmailForm/EmailForm";
 
 
-const Home = ({location}) => {
+const Home = () => {
       return (
         <div className="homeWrapper">
             <div className="background" id="background">

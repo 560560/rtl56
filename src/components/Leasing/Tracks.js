@@ -1,9 +1,10 @@
 import React from 'react';
 import tracksLogo from "../../assets/images/tracksLogo.png";
 
-const Tracks = (props) => {
+const Tracks = ({showRightSide}) => {
+
     return (
-        <div className="leasingItem">
+        <div className="leasingItem tracks">
             <div className="leftSide">
                 <div className="header">
                     <h1>Лизинг грузовых автомобилей</h1>
@@ -16,11 +17,13 @@ const Tracks = (props) => {
                     <p>5.</p> <span>Срок лизинга от 12 месяцев</span>
                 </div>
             </div>
+            {showRightSide &&
             <div className="rightSide">
                 <div className="leasingImage">
                     <img src={tracksLogo} alt="Лизинг грузовых автомобилей"/>
                 </div>
             </div>
+            }
         </div>
     );
 }
