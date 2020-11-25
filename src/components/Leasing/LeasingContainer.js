@@ -8,7 +8,8 @@ class LeasingContainer extends Component {
     }
 
     componentDidMount() {
-        if (window.screen.width < 960) {
+
+        if (window.screen.width < 930 && window.screen.height < 980) {
             this.setState({showRightSide: false})
         } else {
             this.setState({

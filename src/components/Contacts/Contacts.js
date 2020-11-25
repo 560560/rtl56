@@ -8,12 +8,12 @@ import portret from "../../assets/images/portret.jpg"
 
 
 const mapData = {
-    center: [51.774711, 55.158696],
+    center: [51.775416, 55.164949],
     zoom: 17,
 };
 
 const coordinates = [
-    [51.774107, 55.158696],
+    [51.775416, 55.164949]
 
 ];
 
@@ -46,7 +46,8 @@ const Contacts = (props) => {
                         <div className="description">
                             <div className="title">Whatsapp:</div>
                             <div className="text"><a
-                                href="whatsapp://send?text=Здравствуйте. Я сейчас на вашем сайте rtl56.ru. Есть вопрос: &phone=+79033670787&abid=+79033670787">+7 903
+                                href="whatsapp://send?text=Здравствуйте. Я сейчас на вашем сайте rtl56.ru. Есть вопрос: &phone=+79033670787&abid=+79033670787">+7
+                                903
                                 367-07-87</a></div>
                         </div>
                     </div>
@@ -54,8 +55,10 @@ const Contacts = (props) => {
                         <div className="icon"><ImLocation/></div>
                         <div className="description">
                             <div className="title">Адрес:</div>
-                            <div className="text"><a href="https://yandex.ru/maps/?rtext=~51.774107%2C55.158696" target="_blank" rel="noreferrer" >460000 Россия, г.Оренбург,<br/> ул.
-                                Мало-луговая, д.3/1 оф.7</a></div>
+                            <div className="text"><a href="https://yandex.ru/maps/?rtext=~51.775416%2C55.164949"
+                                                     target="_blank" rel="noreferrer">460000 Россия,
+                                г.Оренбург,<br/> пр-т.
+                                Гагарина, д.40 оф.7</a></div>
                         </div>
 
                     </div>
@@ -98,7 +101,8 @@ const Contacts = (props) => {
             <div className="map">
                 <YMaps>
                     <Map defaultState={mapData} width="100%" height="400px">
-                        {coordinates.map(coordinate => <Placemark geometry={coordinate} key={Math.random()} options={{iconColor: '#da251d'}}/>)}
+                        {coordinates.map(coordinate => <Placemark geometry={coordinate} key={Math.random()}
+                                                                  options={{iconColor: '#da251d'}}/>)}
                     </Map>
                 </YMaps>
             </div>

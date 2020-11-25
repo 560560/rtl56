@@ -10,7 +10,7 @@ const Footer = (props) => {
             <div className="footerWrapper">
                 <div className="footerItem findUs">
                     <div className="icon"><NavLink to="/contacts"><ImLocation/></NavLink></div>
-                    <div className="text"><NavLink to="/contacts"><span>г.Оренбург, ул. Мало-луговая, д.3/1 оф.7</span></NavLink></div>
+                    <div className="text"><NavLink to="/contacts"><span>г.Оренбург, пр-т. Гагарина, д.40 оф.7</span></NavLink></div>
                 </div>
                 <div className="footerItem email">
                     <div className="icon"><a href="mailto:mail@example.com"><FiMail/></a></div>
