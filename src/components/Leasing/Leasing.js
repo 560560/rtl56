@@ -7,10 +7,12 @@ import Special from "./Special";
 import Equipment from "./Equipment";
 
 import {Swiper, SwiperSlide} from "swiper/react";
-
+import SwiperCore, {Navigation, Pagination} from "swiper"
 import "swiper/swiper-bundle.css"
 
-const Leasing = ({showRightSide, screenWidth}) => {
+SwiperCore.use([Navigation, Pagination])
+
+const Leasing = ({showRightSide}) => {
 
 
     const pages = [
@@ -21,18 +23,18 @@ const Leasing = ({showRightSide, screenWidth}) => {
         <Equipment showRightSide={showRightSide}/>
     ]
     let slides = []
-    for (let i=0; i<pages.length; i++) {
+    for (let i = 0; i < pages.length; i++) {
         slides.push(
             <SwiperSlide key={`slide-${i}`}>
                 {pages[i]}
             </SwiperSlide>
         )
     }
-    console.log(slides)
-    return (
-        <div className="leasingWrapper" >
 
-            <Swiper id="main">
+    return (
+        <div className="leasingWrapper">
+
+            <Swiper id="main" navigation pagination={{clickable: true}}>
                 {slides}
             </Swiper>
 
