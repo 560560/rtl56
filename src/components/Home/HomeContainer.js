@@ -31,12 +31,14 @@ class HomeContainer extends Component {
 
 
     componentDidMount() {
-        console.log()
+
         this.horizontalTest()
         window.addEventListener("orientationchange", () => {
             this.horizontalTest()
         })
     }
+
+
 
     render() {
         return (
