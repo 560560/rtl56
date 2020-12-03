@@ -7,6 +7,14 @@ class LeasingContainer extends Component {
         this.state = {showRightSide: true};
     }
 
+    onOrientationChange = () => {
+        let navbarHeight = document.querySelector(".navbarWrapper").clientHeight
+        if (window.screen.orientation.type === "portrait-primary" && window.screen.height < 900) {
+            document.querySelector(".leasingItem").style.height = `${window.screen.height * 0.76 - navbarHeight}px`
+        } else if (window.screen.orientation.type === "landscape-primary" && window.screen.height < 500) {
+            document.querySelector(".leasingItem").style.height = `${window.screen.height - navbarHeight - 60}px`
+        }
+    }
 
     componentDidMount() {
 
@@ -18,21 +26,11 @@ class LeasingContainer extends Component {
             })
         }
         this.onOrientationChange()
-        window.addEventListener("orientationchange", () => {
-            this.onOrientationChange()
-            console.log("Was")
-        })
-
-
+        window.addEventListener("orientationchange", this.onOrientationChange)
     }
 
-    onOrientationChange = () => {
-        let navbarHeight = document.querySelector(".navbarWrapper").clientHeight
-        if (window.screen.orientation.type === "portrait-primary" && window.screen.height < 900) {
-            document.querySelector(".leasingItem").style.height = `${window.screen.height * 0.8 - navbarHeight}px`
-        } else if (window.screen.orientation.type === "landscape-primary" && window.screen.height < 500) {
-            document.querySelector(".leasingItem").style.height = `${window.screen.height - navbarHeight - 60}px`
-        }
+    componentWillUnmount() {
+        window.removeEventListener("orientationchange", this.onOrientationChange)
     }
 
     render() {

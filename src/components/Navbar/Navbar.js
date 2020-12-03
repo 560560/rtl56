@@ -56,7 +56,7 @@ const Navbar = (props) => {
                         <li id="homeLink"><NavLink to="/home">Главная</NavLink></li>
                         <li><NavLink to="/leasing">Услуги лизинга</NavLink></li>
                         <li><NavLink to="/docs">Документы</NavLink></li>
-                        <li><NavLink to="/faq">Вопрос-ответ</NavLink></li>
+                        {/*<li><NavLink to="/faq">Вопрос-ответ</NavLink></li>*/}
                         <li><NavLink to="/about">О компании</NavLink></li>
                         <li><NavLink to="/contacts">Контакты</NavLink></li>
                     </ul>

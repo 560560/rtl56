@@ -11,7 +11,7 @@ class HomeContainer extends Component {
     }
 
     horizontalTest = () => {
-        if (window.screen.orientation.type === "landscape-primary" && (this.props.history.location.pathname === "/" || this.props.history.location.pathname === "/home")) {
+        if (window.screen.orientation.type === "landscape-primary" ) {
             if (document.getElementsByClassName('manualHeight')[0]) {
                 document.getElementsByClassName('manualHeight')[0].style.height = `100%`
             }
@@ -20,7 +20,7 @@ class HomeContainer extends Component {
             document.querySelector("#headerContent").classList.add("horizontal")
 
 
-        } else if (this.props.history.location.pathname === "/" || this.props.history.location.pathname === "/home") {
+        } else {
             document.querySelector("#background").classList.remove("horizontal")
             document.querySelector("#background").classList.add("manualHeight")
             document.querySelector("#headerContent").classList.remove("horizontal")
@@ -33,12 +33,13 @@ class HomeContainer extends Component {
     componentDidMount() {
 
         this.horizontalTest()
-        window.addEventListener("orientationchange", () => {
-            this.horizontalTest()
-        })
+        window.addEventListener("orientationchange", this.horizontalTest)
     }
 
-
+    componentWillUnmount() {
+        window.removeEventListener("orientationchange",this.horizontalTest)
+        console.log("Home listenerRemoved")
+    }
 
     render() {
         return (
