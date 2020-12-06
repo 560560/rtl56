@@ -8,12 +8,12 @@ import portret from "../../assets/images/portret.jpg"
 
 
 const mapData = {
-    center: [51.775416, 55.164949],
-    zoom: 17,
+    center: [55.773505, 37.632727],
+    zoom: 18,
 };
 
 const coordinates = [
-    [51.775416, 55.164949]
+    [55.773505, 37.632727]
 
 ];
 
@@ -31,14 +31,14 @@ const Contacts = (props) => {
                         <div className="icon"><IoIosCall/></div>
                         <div className="description">
                             <div className="title">Телефон:</div>
-                            <div className="text"><a href="tel:+73532270787">8 (3532) 27-07-87</a></div>
+                            <div className="text"><a href="tel:+73532270787">8 (495) 427-07-87</a></div>
                         </div>
                     </div>
                     <div className="block-item email-block">
                         <div className="icon"><FiMail/></div>
                         <div className="description">
                             <div className="title">E-mail:</div>
-                            <div className="text"><a href="mailto:mail@example.com">rostehlizing.56@mail.ru</a></div>
+                            <div className="text"><a href="mailto:mail@example.com">rostehlizing@mail.ru</a></div>
                         </div>
                     </div>
                     <div className="block-item whatsapp-block">
@@ -47,7 +47,7 @@ const Contacts = (props) => {
                             <div className="title">Whatsapp:</div>
                             <div className="text"><a
                                 href="whatsapp://send?text=Здравствуйте. Я сейчас на вашем сайте rtl56.ru. Есть вопрос: &phone=+79033670787&abid=+79033670787">+7
-                                903
+                                777
                                 367-07-87</a></div>
                         </div>
                     </div>
@@ -56,9 +56,9 @@ const Contacts = (props) => {
                         <div className="description">
                             <div className="title">Адрес:</div>
                             <div className="text"><a href="https://yandex.ru/maps/?rtext=~51.775416%2C55.164949"
-                                                     target="_blank" rel="noreferrer">460000 Россия,
-                                г.Оренбург,<br/> пр-т.
-                                Гагарина, д.40 оф.7</a></div>
+                                                     target="_blank" rel="noreferrer">770000 Россия,
+                                г.Москва,<br/> пр-т.
+                                Мира, д.8 оф.7</a></div>
                         </div>
 
                     </div>
@@ -76,15 +76,15 @@ const Contacts = (props) => {
                     </div>
 
                     <p>Полное наименование</p>
-                    <span>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "РЕНОВАЦИЯ ОСНОВНЫХ СРЕДСТВ И ТЕХНОЛОГИЙ ЛИЗИНГА"</span>
+                    <span>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "РОСТЕХЛИЗИНГ"</span>
                     <p>ИНН</p>
-                    <span>5610122954</span>
+                    <span>7710177954</span>
                     <p>КПП</p>
-                    <span>561001001</span>
+                    <span>771001001</span>
                     <p>ОГРН</p>
-                    <span>1085658021866 от 11 июля 2008 г.</span>
+                    <span>7777658021866 от 11 июля 2008 г.</span>
                     <p>Юридический адрес</p>
-                    <span>460008, Оренбургская область, город Оренбург, улица Садовое Кольцо (Поселок Ростоши Мкр.), дом 128, квартира 18</span>
+                    <span>770008, Московская область, город Москва, улица Садовое Кольцо, дом 28, квартира 78</span>
 
                 </div>
                 <div className="generalWrapper">
@@ -93,7 +93,7 @@ const Contacts = (props) => {
                             <h2>Генеральный директор</h2>
                         </div>
                         <img src={portret} alt="Горохов Александр Иванович"/>
-                        <h4>Горохов Александр Иванович</h4>
+                        <h4>Иванов Александр Иванович</h4>
 
                     </div>
                 </div>

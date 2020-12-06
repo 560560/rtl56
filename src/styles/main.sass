@@ -1205,6 +1205,7 @@ body
         height: 100%
         margin-bottom: 20px
 
+
         .logo
           width: 380px
 
@@ -1229,6 +1230,15 @@ body
           height: 100%
           transition: all 0.3s ease
 
+          .closeCover
+            display: none
+            position: fixed
+            top: 0
+            left: 0
+            height: 100%
+            width: 50%
+
+
           ul
             display: block
 
@@ -1240,9 +1250,9 @@ body
                 font-size: 25px
 
           &.active
-
-
             left: 0
+            .closeCover
+              display: block
 
         .navbarContacts
           a

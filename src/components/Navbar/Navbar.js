@@ -60,9 +60,10 @@ const Navbar = (props) => {
                         <li><NavLink to="/about">О компании</NavLink></li>
                         <li><NavLink to="/contacts">Контакты</NavLink></li>
                     </ul>
+                    <div className="closeCover" onClick={() => setActiveBurger(false)}> </div>
                 </div>
                 <div className="navbarContacts">
-                    <a href="tel:+73532270787"><span>8 (3532) 27-07-87</span></a>
+                    <a href="tel:+74954270787"><span>8 (495) 427-07-87</span></a>
 
                 </div>
                 <div className={`burgerMenu${activeBurger ? " active" : ""}`} onClick={() => {
