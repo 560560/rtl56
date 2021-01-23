@@ -46,7 +46,7 @@ const Contacts = (props) => {
                         <div className="description">
                             <div className="title">Whatsapp:</div>
                             <div className="text"><a
-                                href="whatsapp://send?text=Здравствуйте. Я сейчас на вашем сайте rtl56.ru. Есть вопрос: &phone=+79033670787&abid=+79033670787">+7
+                                href="whatsapp://send?text=Здравствуйте. Я сейчас на вашем сайте rtl56.ru. Есть вопрос: &phone=+77773670787&abid=+79033670787">+7
                                 777
                                 367-07-87</a></div>
                         </div>
