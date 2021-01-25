@@ -8,12 +8,12 @@ import portret from "../../assets/images/portret.jpg"
 
 
 const mapData = {
-    center: [55.773505, 37.632727],
+    center: [51.768199, 55.095293],
     zoom: 18,
 };
 
 const coordinates = [
-    [55.773505, 37.632727]
+    [51.768199, 55.095293]
 
 ];
 
@@ -31,14 +31,14 @@ const Contacts = (props) => {
                         <div className="icon"><IoIosCall/></div>
                         <div className="description">
                             <div className="title">Телефон:</div>
-                            <div className="text"><a href="tel:+73532270787">8 (495) 427-07-87</a></div>
+                            <div className="text"><a href="tel:+79033670787">8 (903) 367-07-87</a></div>
                         </div>
                     </div>
                     <div className="block-item email-block">
                         <div className="icon"><FiMail/></div>
                         <div className="description">
                             <div className="title">E-mail:</div>
-                            <div className="text"><a href="mailto:mail@example.com">rostehlizing@mail.ru</a></div>
+                            <div className="text"><a href="rostehlizing.56@mail.ru">rostehlizing.56@mail.ru</a></div>
                         </div>
                     </div>
                     <div className="block-item whatsapp-block">
@@ -46,9 +46,9 @@ const Contacts = (props) => {
                         <div className="description">
                             <div className="title">Whatsapp:</div>
                             <div className="text"><a
-                                href="whatsapp://send?text=Здравствуйте. Я сейчас на вашем сайте rtl56.ru. Есть вопрос: &phone=+77773670787&abid=+79033670787">+7
-                                777
-                                367-07-87</a></div>
+                                href="whatsapp://send?text=Здравствуйте. Я сейчас на вашем сайте rtl56.ru. Есть вопрос: &phone=79033670787&abid=+79033670787">
+                                +7 903 367-07-87</a>
+                            </div>
                         </div>
                     </div>
                     <div className="block-item address-block">
@@ -56,9 +56,8 @@ const Contacts = (props) => {
                         <div className="description">
                             <div className="title">Адрес:</div>
                             <div className="text"><a href="https://yandex.ru/maps/?rtext=~51.775416%2C55.164949"
-                                                     target="_blank" rel="noreferrer">770000 Россия,
-                                г.Москва,<br/> пр-т.
-                                Мира, д.8 оф.7</a></div>
+                                                     target="_blank" rel="noreferrer">460008 Россия,
+                                г.Оренбург</a></div>
                         </div>
 
                     </div>
@@ -78,16 +77,16 @@ const Contacts = (props) => {
                     <p>Полное наименование</p>
                     <span>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "РОСТЕХЛИЗИНГ"</span>
                     <p>ИНН</p>
-                    <span>7710177954</span>
+                    <span>5610122954</span>
                     <p>КПП</p>
-                    <span>771001001</span>
+                    <span>561001001</span>
                     <p>ОГРН</p>
-                    <span>7777658021866 от 11 июля 2008 г.</span>
+                    <span>1085658021866</span>
                     <p>Юридический адрес</p>
-                    <span>770008, Московская область, город Москва, улица Садовое Кольцо, дом 28, квартира 78</span>
+                    <span>460008, г.Оренбург, поселок Ростоши, улица Садовое Кольцо, дом 128, квартира 18</span>
 
                 </div>
-                <div className="generalWrapper">
+                {/*<div className="generalWrapper">
                     <div className="general">
                         <div className="generalHeader">
                             <h2>Генеральный директор</h2>
@@ -96,7 +95,7 @@ const Contacts = (props) => {
                         <h4>Иванов Александр Иванович</h4>
 
                     </div>
-                </div>
+                </div>*/}
             </div>
             <div className="map">
                 <YMaps>

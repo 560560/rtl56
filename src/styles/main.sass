@@ -774,6 +774,7 @@ body
         font-family: "Roboto", "sans-serif"
         font-size: 17px
         padding-left: 40px
+
         .mobile
           display: none
 
@@ -1652,8 +1653,15 @@ body
                       font-size: 28px
 
                   .description
-                    p, span
-                      font-size: 20px
+                    grid-row-gap: 0
+
+                    .descriptionItem
+                      p
+                        font-size: 20px
+                        margin-bottom: 1px
+
+                      span
+                        font-size: 14px
 
                 .rightSide
                   .leasingImage
@@ -2172,16 +2180,20 @@ body
         .swiper-container
           .swiper-button-prev, .swiper-button-next
             display: none
+
       .docsWrapper
         .choseWrapper
           .headerButton
             .desktop
               display: none
+
             .mobile
               display: block
+
         .docsBody
           .docsItems
             padding-left: 20px
+
             .mobile
               margin-bottom: 30px
               display: block
@@ -2270,11 +2282,18 @@ body
                 .leftSide
                   padding-left: 10px
 
+                  .description
+                    grid-row-gap: 0
+
+                    h4
+                      margin-bottom: 50px
+
                   .header
                     margin-bottom: 0
 
                     h1
-                      border-bottom: none
+                      margin-bottom: 25px
+                      padding-bottom: 5px
                       font-size: 26px
 
       .aboutWrapper
@@ -2308,11 +2327,14 @@ body
           .headerButton
             .desktop
               display: none
+
             .mobile
               display: block
+
         .docsBody
           .docsItems
             padding-left: 20px
+
             .mobile
               margin-bottom: 30px
               display: block
@@ -2433,7 +2455,7 @@ body
                       font-size: 24px
 
                   .description
-                    grid-row-gap: 17px
+                    grid-row-gap: 0
 
       .contactsWrapper
         .contactsContent
