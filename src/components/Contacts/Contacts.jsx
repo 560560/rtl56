@@ -7,10 +7,10 @@ import {YMaps, Map, Placemark} from 'react-yandex-maps';
 import portret from "../../assets/images/portret.jpg"
 
 
-const mapData = {
+/*const mapData = {
     center: [51.768199, 55.095293],
     zoom: 18,
-};
+};*/
 
 const coordinates = [
     [51.768199, 55.095293]
@@ -31,14 +31,14 @@ const Contacts = (props) => {
                         <div className="icon"><IoIosCall/></div>
                         <div className="description">
                             <div className="title">Телефон:</div>
-                            <div className="text"><a href="tel:+79033670787">8 (903) 367-07-87</a></div>
+                            <div className="text"><a href="tel:+73532270787">8 (3532) 27-07-87</a></div>
                         </div>
                     </div>
                     <div className="block-item email-block">
                         <div className="icon"><FiMail/></div>
                         <div className="description">
                             <div className="title">E-mail:</div>
-                            <div className="text"><a href="rostehlizing.56@mail.ru">rostehlizing.56@mail.ru</a></div>
+                            <div className="text"><a href="mailto:rostehlizing.56@mail.ru">rostehlizing.56@mail.ru</a></div>
                         </div>
                     </div>
                     <div className="block-item whatsapp-block">
@@ -74,8 +74,8 @@ const Contacts = (props) => {
                         <h2>Реквизиты компании</h2>
                     </div>
 
-                    <p>Полное наименование</p>
-                    <span>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "РОСТЕХЛИЗИНГ"</span>
+                    <p>Наименование</p>
+                    <span>ООО "РОСТЕХЛИЗИНГ"</span>
                     <p>ИНН</p>
                     <span>5610122954</span>
                     <p>КПП</p>
@@ -97,14 +97,14 @@ const Contacts = (props) => {
                     </div>
                 </div>*/}
             </div>
-            <div className="map">
+           {/* <div className="map">
                 <YMaps>
                     <Map defaultState={mapData} width="100%" height="400px">
                         {coordinates.map(coordinate => <Placemark geometry={coordinate} key={Math.random()}
                                                                   options={{iconColor: '#da251d'}}/>)}
                     </Map>
                 </YMaps>
-            </div>
+            </div>*/}
         </header>
 
     );

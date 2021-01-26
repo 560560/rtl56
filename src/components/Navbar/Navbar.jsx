@@ -63,7 +63,7 @@ const Navbar = (props) => {
                     <div className="closeCover" onClick={() => setActiveBurger(false)}> </div>
                 </div>
                 <div className="navbarContacts">
-                    <a href="tel:+79033670787"><span>8 (903) 367-07-87</span></a>
+                    <a href="tel:+79033670787"><span>8 (3532) 27-07-87</span></a>
 
                 </div>
                 <div className={`burgerMenu${activeBurger ? " active" : ""}`} onClick={() => {

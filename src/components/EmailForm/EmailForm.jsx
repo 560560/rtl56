@@ -26,7 +26,7 @@ const EmailForm = ({sitePage, buttonTitle, additionalInfo}) => {
         let data = {
             "service_id": 'gmail',
             "template_id": 'RTL56',
-            "user_id": 'user_pBCdFhPRNQ6AchskAg1pq',
+            "user_id": 'user_82nKSGSMqUcZp7kW9mcyI',
             "template_params": {
                 'name': formData.name,
                 'phone': formData.phone,
@@ -52,6 +52,7 @@ const EmailForm = ({sitePage, buttonTitle, additionalInfo}) => {
         phone: Yup.string()
             .required("Пожалуйста введите номер телефона")
             .min(6, "Номер не может быть короче 6 цифр"),
+
 
     })
 
