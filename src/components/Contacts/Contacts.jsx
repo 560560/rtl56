@@ -56,7 +56,7 @@ const Contacts = (props) => {
                         <div className="description">
                             <div className="title">Адрес:</div>
                             <div className="text"><a href="https://yandex.ru/maps/?rtext=~51.775416%2C55.164949"
-                                                     target="_blank" rel="noreferrer">460008 Россия,
+                                                     target="_blank" rel="noreferrer">460058 Россия,
                                 г.Оренбург</a></div>
                         </div>
 
