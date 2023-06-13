@@ -65,7 +65,6 @@ const Navbar = (props) => {
             <li>
               <NavLink to="/docs">Документы</NavLink>
             </li>
-            {/*<li><NavLink to="/faq">Вопрос-ответ</NavLink></li>*/}
             <li>
               <NavLink to="/about">О компании</NavLink>
             </li>
@@ -78,8 +77,8 @@ const Navbar = (props) => {
           </div>
         </div>
         <div className="navbarContacts">
-          <a href="tel:+79033670787">
-            <span>8 (3532) 27-07-87</span>
+          <a href="tel:+73532777777">
+            <span>8 (3532) 77-77-77</span>
           </a>
         </div>
         <div

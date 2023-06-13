@@ -22,25 +22,25 @@ export const Footer = () => {
         </div>
         <div className="footerItem email">
           <div className="icon">
-            <a href="mailto:rostehlizing.56@mail.ru">
+            <a href="mailto:rtl56@gacv.ru">
               <FiMail />
             </a>
           </div>
           <div className="text">
-            <a href="mailto:rostehlizing.56@mail.ru">
-              <span>rostehlizing.56@mail.ru</span>
+            <a href="mailto:rtl56@gacv.ru">
+              <span>rtl56@gacv.ru</span>
             </a>
           </div>
         </div>
         <div className="footerItem phone">
           <div className="icon">
-            <a href="tel:+73532270787">
+            <a href="tel:+73532777777">
               <IoIosCall />
             </a>
           </div>
           <div className="text">
-            <a href="tel:+73532270787">
-              <span>8 3532 27-07-87</span>
+            <a href="tel:+73532777777">
+              <span>8 3532 77-77-77</span>
             </a>
           </div>
         </div>

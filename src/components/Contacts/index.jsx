@@ -28,7 +28,7 @@ export const Contacts = () => (
           <div className="description">
             <div className="title">Телефон:</div>
             <div className="text">
-              <a href="tel:+73532270787">8 (3532) 27-07-87</a>
+              <a href="tel:+73532777777">8 (3532) 77-77-77</a>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@ export const Contacts = () => (
           <div className="description">
             <div className="title">E-mail:</div>
             <div className="text">
-              <a href="mailto:rostehlizing.56@mail.ru">rostehlizing.56@mail.ru</a>
+              <a href="mailto:rtl56@gacv.ru">rtl56@gacv.ru</a>
             </div>
           </div>
         </div>
@@ -50,8 +50,8 @@ export const Contacts = () => (
           <div className="description">
             <div className="title">Whatsapp:</div>
             <div className="text">
-              <a href="whatsapp://send?text=Здравствуйте. Я сейчас на вашем сайте rtl56.ru. Есть вопрос: &phone=79033670787&abid=+79033670787">
-                +7 903 367-07-87
+              <a href="whatsapp://send?text=Здравствуйте. Я сейчас на вашем сайте rtl56.ru. Есть вопрос: &phone=77777777777&abid=+77777777777">
+                +7 777 777-77-77
               </a>
             </div>
           </div>
@@ -64,7 +64,7 @@ export const Contacts = () => (
             <div className="title">Адрес:</div>
             <div className="text">
               <a href="https://yandex.ru/maps/?rtext=~51.775416%2C55.164949" target="_blank" rel="noreferrer">
-                460058 Россия, г.Оренбург
+                777777 Россия, г.Оренбург
               </a>
             </div>
           </div>
@@ -82,15 +82,15 @@ export const Contacts = () => (
         </div>
 
         <p>Наименование</p>
-        <span>ООО "РОСТЕХЛИЗИНГ"</span>
+        <span>ООО "РТЛ56"</span>
         <p>ИНН</p>
-        <span>5610122954</span>
+        <span>5610177777</span>
         <p>КПП</p>
-        <span>561001001</span>
+        <span>561077777</span>
         <p>ОГРН</p>
-        <span>1085658021866</span>
+        <span>108565877777</span>
         <p>Юридический адрес</p>
-        <span>460058, г.Оренбург, улица Чкалова, дом 55, квартира 230</span>
+        <span>460058, г.Оренбург, улица Чкалова, дом 77, квартира 777</span>
       </div>
       <div className="generalWrapper">
         <div className="general">
@@ -98,7 +98,7 @@ export const Contacts = () => (
             <h2>Генеральный директор</h2>
           </div>
           <img src={portret} alt="Горохов Александр Иванович" />
-          <h4>Иванов Александр Иванович</h4>
+          <h4>Иванов Иван Иванович</h4>
         </div>
       </div>
     </div>
