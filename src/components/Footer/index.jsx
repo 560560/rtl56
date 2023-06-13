@@ -16,7 +16,7 @@ export const Footer = () => {
           </div>
           <div className="text">
             <NavLink to="/contacts">
-              <span>г.Орунбург</span>
+              <span>г.Оренбург</span>
             </NavLink>
           </div>
         </div>
